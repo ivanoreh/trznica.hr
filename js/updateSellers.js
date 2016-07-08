@@ -16,16 +16,17 @@ function updateSellers(){
 
             }
 
+
+
             var item = '<div class="single-wid-product">' +
-                       '<a href="single-product.html"><img src="' + img + '" alt="" class="product-thumb"></a>' +
-                        '<h2><a href="single-product.html">' + resp[i].name.first + ' ' + resp[i].name.last + '</a></h2>' +
-                       '<h2><a href="single-product.html">Broj proizvoda: ' + Math.round(Math.random() * 3)  +
+                       '<a href="prodavac.html?seller='+ resp[i]._id + '"><img src="' + img + '" alt="" class="product-thumb"></a>' +
+                        '<h2><a href="prodavac.html?seller='+ resp[i]._id + '">' + resp[i].name.first + ' ' + resp[i].name.last + '</a></h2>' +
+                       '<h2><a href="prodavac.html?seller='+ resp[i]._id + '" id="pr'+resp[i]._id +'">Broj proizvoda: ' + Math.round(Math.random() * 3)  +
                        '</div>';
 
             if (!resp[i].isAdmin)
                 newInnerHTML += item;
         }
 
-        lista.innerHTML = newInnerHTML;
     })
 }

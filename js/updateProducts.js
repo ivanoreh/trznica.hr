@@ -8,7 +8,7 @@ function updateProducts(){
         var lista = document.getElementById("product-list");
         var newInnerHTML = "";
 
-        for(var i = 0; i < resp.length; ++i){
+        for(var i = 0; i < resp.length && i < 8; ++i){
             var img = "img/placeholder.png";
             try{
                 img = resp[i].slike[0].url;

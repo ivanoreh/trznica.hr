@@ -85,7 +85,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="product-bit-title text-center">
-                        <h2>Tržnica - <span id="kategorijaid"></span></h2>
+                        <h2>Tržnica - <span id="kategorijaid"></span></h2><img id="kategorijasrc">
                     </div>
                 </div>
             </div>
@@ -201,6 +201,23 @@
         XHR.get(url + 'owner/' + id, function(resp){
             console.log(resp);
             document.getElementById("kategorijaid").innerHTML = resp["vlasnik"]["name"].first + " " + resp["vlasnik"]["name"].last;
+
+
+            XHR.get(url + 'users', function(resp){
+                console.log(resp);
+                for ( var i = 0; i < resp.length; ++i){
+                    if(resp[i]._id == id){
+                        var img = "img/placeholder.png";
+                        try{
+                            img = resp[i].slika.url;
+                            document.getElementById("kategorijasrc").src = img;
+                        }catch(e){
+
+                        }
+
+                    }
+                }
+            });
 
             var lista = document.getElementById("product-list");
             var newInnerHTML = "";
