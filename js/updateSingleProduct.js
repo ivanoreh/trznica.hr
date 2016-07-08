@@ -68,9 +68,9 @@ function updateSingleProduct(id){
 
                 var item ='<h2 class="sidebar-title">Od istog ponuditelja</h2>' +
                     '<div class="single-wid-product">' +
-                    '<a href="single-product.html"><img src="' + img + '" alt="" class="product-thumb"></a>' +
-                    '<h2><a href="single-product.html">' + resp[i].name.first + ' ' + resp[i].name.last + '</a></h2>' +
-                    '<h2><a href="single-product.html">Broj proizvoda: 1' +
+                    '<a href="prodavac.html?seller='+ resp[i]._id + '"><img src="' + img + '" alt="" class="product-thumb"></a>' +
+                    '<h2><a href="prodavac.html?seller='+ resp[i]._id + '">' + resp[i].name.first + ' ' + resp[i].name.last + '</a></h2>' +
+                    '<h2><a href="prodavac.html?seller='+ resp[i]._id + '">Broj proizvoda: 1' +
                     '</div>';
 
                 document.getElementById("ponuditelj").innerHTML = item;
