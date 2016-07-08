@@ -20,7 +20,7 @@ function updateProducts(){
                 '<div class="product-f-image">' +
                 '<img src="' + img +'" alt="" class="product-img">' +
                 '<div class="product-hover">' +
-                '<a href="#" class="add-to-cart-link"><i class="fa fa-share-alt"></i> Share </a>' +
+                '<a href="https://www.facebook.com/sharer/sharer.php?u=http://ivanorehovec.info/single-product.html?id='+ resp[i]._id  + '" class="add-to-cart-link"><i class="fa fa-share-alt"></i> Share </a>' +
                 '<a href="single-product.html?id='+ resp[i]._id  + '" class="view-details-link"><i class="fa fa-link"></i> Detalji </a>'+
                 '</div>'+
                 '</div>'+
