@@ -33,7 +33,7 @@ function updateSingleProduct(id){
             '<div role="tabpanel">'+
             '<ul class="product-tab" role="tablist">'+
             '<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Detalji</a></li>'+
-            '<li role="presentation"><a href="https://www.facebook.com/sharer/sharer.php?u=http://ivanorehovec.info/single-product.html?id='+ item._id  + '"  >Share</a></li>'+
+            '<li role="presentation"><a href="https://www.facebook.com/sharer/sharer.php?u=http://ivanorehovec.info/trznica.hr/single-product.html?id='+ item._id  + '"  >Share</a></li>'+
             '<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Lokacija</a></li>'+
             '</ul>'+
             '<div role="tabpanel" class="tab-pane fade in active" id="home">'+

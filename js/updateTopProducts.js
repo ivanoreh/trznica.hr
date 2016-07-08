@@ -22,7 +22,7 @@ function updateTopProducts() {
                        '<div class="product-carousel-price">' +
                     '<ins>' + resp[i].cijena + ' Kn</ins>' +
                     '</div>' +
-                       '<a href="https://www.facebook.com/sharer/sharer.php?u=http://ivanorehovec.info/single-product.html?id=' + resp[i]._id + '" class="add-to-cart-link"><i class="fa fa-share-alt"></i> Share </a>' +
+                       '<a href="https://www.facebook.com/sharer/sharer.php?u=http://ivanorehovec.info/trznica.hr/single-product.html?id=' + resp[i]._id + '" class="add-to-cart-link"><i class="fa fa-share-alt"></i> Share </a>' +
                        '<a href="single-product.html?id=' + resp[i]._id + '" class="view-details-link"><i class="fa fa-link"></i> Detalji </a>' +
                        '</div>';
 
