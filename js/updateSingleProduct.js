@@ -2,11 +2,12 @@
  * Created by ivanoreh on 7/8/16.
  */
 
+var myitem;
 function updateSingleProduct(id){
     XHR.get(url + 'product/' + id, function(item){
         console.log(item);
         item = item[0];
-
+        var myitem = item;
         XHR.get(url + 'category/' + item["kategorija"][0], function(resp){
             console.log(resp);
             document.getElementById("category").innerHTML = "<a>" + resp[0].ime + "</a>";
@@ -49,5 +50,32 @@ function updateSingleProduct(id){
 
         document.getElementById("proizvod").innerHTML = item;
         document.getElementById("proizvod-img").src = img;
+
+        XHR.get(url + 'users/', function(resp){
+            console.log(resp);
+
+
+            for(var i = 0; i < resp.length; ++i){
+                if(resp[i]._id != myitem.vlasnik)
+                    continue;
+
+                var img = "img/placeholder.png";
+                try{
+                    img = resp[i].slika.url;
+                }catch(e){
+
+                }
+
+                var item ='<h2 class="sidebar-title">Od istog ponuditelja</h2>' +
+                    '<div class="single-wid-product">' +
+                    '<a href="single-product.html"><img src="' + img + '" alt="" class="product-thumb"></a>' +
+                    '<h2><a href="single-product.html">' + resp[i].name.first + ' ' + resp[i].name.last + '</a></h2>' +
+                    '<h2><a href="single-product.html">Broj proizvoda: 1' +
+                    '</div>';
+
+                document.getElementById("ponuditelj").innerHTML = item;
+            }
+
+        })
     })
 }
