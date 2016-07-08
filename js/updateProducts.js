@@ -21,7 +21,7 @@ function updateProducts(){
                 '<img src="' + img +'" alt="" class="product-img">' +
                 '<div class="product-hover">' +
                 '<a href="#" class="add-to-cart-link"><i class="fa fa-share-alt"></i> Share </a>' +
-                '<a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Detalji </a>'+
+                '<a href="single-product.html?id='+ resp[i]._id  + '" class="view-details-link"><i class="fa fa-link"></i> Detalji </a>'+
                 '</div>'+
                 '</div>'+
 
