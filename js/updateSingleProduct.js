@@ -32,9 +32,9 @@ function updateSingleProduct(id){
             '<div role="tabpanel">'+
             '<ul class="product-tab" role="tablist">'+
             '<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Detalji</a></li>'+
+            '<li role="presentation"><a href="http://facebook.com"  >Share</a></li>'+
             '<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Lokacija</a></li>'+
             '</ul>'+
-            '<div class="tab-content">'+
             '<div role="tabpanel" class="tab-pane fade in active" id="home">'+
             '<h2>Opis proizvoda/usluge</h2>'+
             '<p>'+ item["detalji"]+ '</p>'+
