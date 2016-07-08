@@ -1,5 +1,5 @@
 //var url = "http://localhost:3000/";
-var url = "http://hrkify.ivanorehovec.info:3000/";
+var url = "http://ivanorehovec.info:3030/";
 var XHR = new function() {
 	this.post = function(url, data, callback){
 		var xmlHttp = new XMLHttpRequest();
@@ -41,23 +41,7 @@ var XHR = new function() {
 					resp['status'] = xmlHttp.status;
 				}
 
-				var cache = resp;
-				try{
-					cache = JSON.stringify(cache);
-				} catch (e){}
-				Storage.set(url, cache);
 				callback(resp);
-			}
-			else if(xmlHttp.readyState == 4){
-				var cache = Storage.get(url);
-				if(cache == null){
-					return;
-				}
-				try{
-					cache = JSON.parse(cache);
-				}catch(e){}
-
-				callback(cache);
 			}
 		};
 
@@ -71,6 +55,7 @@ var XHR = new function() {
 function getProducts(callback){
     XHR.get(url + "/products", callback);
 }
+
 
 
 /*
