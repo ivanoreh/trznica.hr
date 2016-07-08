@@ -74,30 +74,30 @@
     <div class="promo-area">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
+                <a class="col-md-3 col-sm-6" href="shop.html?category=Hrana">
                     <div class="single-promo promo1">
                         <i class="fa fa-cutlery"></i>
                         <p>Hrana</p>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
+                </a>
+                <a class="col-md-3 col-sm-6" href="shop.html?category=Odjeća/Obuća">
                     <div class="single-promo promo2">
                         <i class="fa fa-child" aria-hidden="true"></i>
                         <p>Odjeća/Obuća</p>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
+                </a>
+                <a class="col-md-3 col-sm-6" href="shop.html?category=Ugostiteljstvo">
                     <div class="single-promo promo3">
                         <i class="fa fa-coffee"></i>
                         <p>Ugostiteljstvo</p>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
+                </a>
+                <a class="col-md-3 col-sm-6" href="shop.html?category=Ostalo">
                     <div class="single-promo promo4">
                         <i class="fa fa-gift"></i>
                         <p>Ostalo</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div> <!-- End promo area -->
@@ -145,32 +145,34 @@
                     <div class="single-product-widget">
                         <h2 class="product-wid-title">Popularni prodavači</h2>
                         <a href="" class="wid-view-more">View All</a>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="img/tomato.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
+                        <div id="sellers-list">
+                            <div class="single-wid-product">
+                                <a href="single-product.html"><img src="img/tomato.jpg" alt="" class="product-thumb"></a>
+                                <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
+                                <div class="product-wid-price">
+                                    <ins>$400.00</ins> <del>$425.00</del>
+                                </div>
                             </div>
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="img/tomato.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Apple new mac book 2015</a></h2>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
+                            <div class="single-wid-product">
+                                <a href="single-product.html"><img src="img/tomato.jpg" alt="" class="product-thumb"></a>
+                                <h2><a href="single-product.html">Apple new mac book 2015</a></h2>
+                                <div class="product-wid-price">
+                                    <ins>$400.00</ins> <del>$425.00</del>
+                                </div>
                             </div>
-                        </div>
-                        <div class="single-wid-product">
-                            <a href="single-product.html"><img src="img/tomato.jpg" alt="" class="product-thumb"></a>
-                            <h2><a href="single-product.html">Apple new i phone 6</a></h2>
-                            <div class="product-wid-price">
-                                <ins>$400.00</ins> <del>$425.00</del>
+                            <div class="single-wid-product">
+                                <a href="single-product.html"><img src="img/tomato.jpg" alt="" class="product-thumb"></a>
+                                <h2><a href="single-product.html">Apple new i phone 6</a></h2>
+                                <div class="product-wid-price">
+                                    <ins>$400.00</ins> <del>$425.00</del>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="single-product-widget">
-                        <h2 class="product-wid-title">Top New</h2>
+                        <h2 class="product-wid-title">Top Novi</h2>
                         <a href="#" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
                             <a href="single-product.html"><img src="img/tomato.jpg" alt="" class="product-thumb"></a>
@@ -278,9 +280,11 @@
 
     <script type="text/javascript" src="js/xhr.js"></script>
     <script type="text/javascript" src="js/updateProducts.js"></script>
+    <script type="text/javascript" src="js/updateSellers.js"></script>
 
     <script>
         updateProducts();
+        updateSellers();
     </script>
   </body>
 </html>
