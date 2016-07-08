@@ -71,13 +71,24 @@
         </div>
     </div> <!-- End site branding area -->
 
+    <div class="product-big-title-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product-bit-title text-center">
+                        <h2>Tržnica - <span id="kategorijaid">Kategorija</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="maincontent-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="latest-product">
-                        <h2 class="section-title">Proizvodi</h2>
                         <div class="product-carousel" id="product-list">
                             <div class="row">
                             </div>
@@ -145,6 +156,7 @@
             </div>
         </div>
     </div> <!-- End footer bottom area -->
+
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
@@ -171,6 +183,16 @@
 
     <script>
         updateProducts();
+        function getQueryStringValue (key) {
+            return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+        }
+
+
+        var id = getQueryStringValue("category");
+        document.getElementById("kategorijaid").innerHTML = id;
+
+        
+
     </script>
 </body>
 </html>
